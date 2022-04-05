@@ -21,6 +21,9 @@ const NewTaskButton = (props) => {
             <TouchableOpacity onPress={() => props.insert(props.task)} style={styles.newTaskButton}>
                 <Text style={styles.newTaskButtonText}>Insert</Text>
             </TouchableOpacity>
+
+            
+            
         </View>
     );
 }

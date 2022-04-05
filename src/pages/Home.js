@@ -31,12 +31,33 @@ export default function Home() {
         } else alert('Task name is required to insert.');
     }
 
+    function deleteTask(idTask) {
+        let newTask = [ ...myTasks ]
+
+        newTask = newTask.filter((x,z)=>
+        {
+            if(z!=idTask)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        });
+
+        setMyTasks(newTask);
+
+
+    }
+
+
     return (
         <View style={styles.container}>
             <NewTaskButton insert={insertTask} task={task} setTask={setTask} style={styles.newTask}></NewTaskButton>
 
             <FlatList
-                style={{paddingBottom: 70}}
+                style={{ paddingBottom: 70 }}
                 data={myTasks}
                 keyExtractor={(item) => item.id}
                 renderItem={({ item }) => (
