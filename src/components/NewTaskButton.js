@@ -60,6 +60,7 @@ const styles = StyleSheet.create({
     },
     newTaskButtonText: {
         color: 'rgb(235, 63, 126)',
-        fontWeight: 'bold'
+        fontWeight: 'bold',
+        flexWrap: 'nowrap'
     }
 })
